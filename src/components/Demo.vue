@@ -4,7 +4,7 @@
             <span class="name">{{ name }}</span>
         </h1>
         <div>
-            <el-input placeholder="請輸入" v-model="myinput" clearable class="my-input"></el-input>
+            <input placeholder="請輸入" v-model="myinput" clearable class="my-input" />
             <div>這裡是你輸入的內容：
                 <div class="show-input">{{ myinput }}</div>
             </div>
@@ -14,7 +14,7 @@
     
 <script setup lang='ts'>
 import { ref, reactive, onMounted, watch } from 'vue'
-const name = ref('你好嗎？衷心感謝')
+const name = ref('Hal')
 const myinput = ref('')
 
 watch(() => myinput.value, (newValue, oldValue) => {
